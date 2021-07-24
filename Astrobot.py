@@ -11,5 +11,10 @@ def promote(message):
 @bot.message_handler(commands=['my_id'])
 def send_id(message):
     bot.send_message(message.chat.id,"Your id: "+str(message.from_user.id))
-    
+
+@bot.message_handler(commands=['start'])
+def starts(message):
+    bot.send_message(message.chat.id,"Hey there, Check the channel @Astronomydeck")
+
 bot.polling()
+bot.set_webhook(url="https://fast-eyrie-96745.herokuapp.com/1640805626:AAF9_CSGSagtrHWQmdxUgtzt4oTrafEsQn4")
